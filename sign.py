@@ -12,7 +12,7 @@ def sign(m):
   
   #generate signature
   #Your code here
-  r, s = ecdsa.sign(m, private_key)
+  r, s = ecdsa.sign(m, private_key, secp256k1, sha256)
 
   assert isinstance(public_key, point.Point)
   assert isinstance(r, int)
